@@ -751,7 +751,7 @@
       "count": 261,
       "max": [
         0.99817550182342529,
-        0.99817544221878052,
+        0.99817556142807007,
         -0.060377679765224457
       ],
       "min": [
@@ -796,6 +796,21 @@
       "type": "VEC2"
     },
     {
+      "bufferView": 1,
+      "byteOffset": 5489128,
+      "componentType": 5126,
+      "count": 261,
+      "max": [
+        1.0000002384185791,
+        0.9919629693031311
+      ],
+      "min": [
+        -0.035710658878087997,
+        0.0071317018009722233
+      ],
+      "type": "VEC2"
+    },
+    {
       "bufferView": 0,
       "byteOffset": 2016684,
       "componentType": 5125,
@@ -811,12 +826,12 @@
   ],
   "asset": {
     "extras": {
-      "author": "Artjoms Horosilovs (https://sketchfab.com/Artjoms_Horosilovs)",
-      "license": "CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "source": "https://sketchfab.com/models/09a15a0c14cb4accaf060a92bc70413d",
-      "title": "Sea Keep \"Lonely Watcher\""
+      "author": "JesseL (https://sketchfab.com/JesseL)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/daa54937ce844ed390101fa9318843ba",
+      "title": "Fantasy Sea Keep"
     },
-    "generator": "Sketchfab-4.14.0",
+    "generator": "Sketchfab-4.28.3",
     "version": "2.0"
   },
   "bufferViews": [
@@ -829,7 +844,7 @@
     },
     {
       "buffer": 0,
-      "byteLength": 5489128,
+      "byteLength": 5491216,
       "byteOffset": 2021724,
       "byteStride": 8,
       "name": "floatBufferViews",
@@ -838,7 +853,7 @@
     {
       "buffer": 0,
       "byteLength": 5496984,
-      "byteOffset": 7510852,
+      "byteOffset": 7512940,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -846,7 +861,7 @@
     {
       "buffer": 0,
       "byteLength": 7322800,
-      "byteOffset": 13007836,
+      "byteOffset": 13009924,
       "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
@@ -854,31 +869,40 @@
   ],
   "buffers": [
     {
-      "byteLength": 20330636,
+      "byteLength": 20332724,
       "uri": "scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/Environment_baseColor.png"
+      "uri": "textures/material_emissive.jpeg"
     },
     {
       "uri": "textures/material_baseColor.png"
     },
     {
-      "uri": "textures/material_5_baseColor.jpeg"
+      "uri": "textures/Fortress_normal.png"
     },
     {
-      "uri": "textures/material_5_emissive.jpeg"
-    },
-    {
-      "uri": "textures/Sand_baseColor.jpeg"
+      "uri": "textures/Fortress_emissive.jpeg"
     },
     {
       "uri": "textures/Fortress_baseColor.png"
     },
     {
-      "uri": "textures/Fortress_emissive.jpeg"
+      "uri": "textures/Environment_normal.png"
+    },
+    {
+      "uri": "textures/Environment_baseColor.png"
+    },
+    {
+      "uri": "textures/Sand_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/material_5_emissive.jpeg"
+    },
+    {
+      "uri": "textures/material_5_baseColor.jpeg"
     }
   ],
   "materials": [
@@ -891,52 +915,15 @@
         1
       ],
       "emissiveTexture": {
-        "index": 6,
+        "index": 3,
         "texCoord": 1
       },
       "name": "Fortress",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1,
-          1,
-          1,
-          1
-        ],
-        "baseColorTexture": {
-          "index": 5,
-          "texCoord": 0
-        },
-        "metallicFactor": 0,
-        "roughnessFactor": 0.59999999999999998
-      }
-    },
-    {
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "Environment",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1,
-          1,
-          1,
-          1
-        ],
-        "baseColorTexture": {
-          "index": 0,
-          "texCoord": 0
-        },
-        "metallicFactor": 0,
-        "roughnessFactor": 0.59999999999999998
-      }
-    },
-    {
-      "doubleSided": true,
-      "emissiveFactor": [
-        0,
-        0,
-        0
-      ],
-      "name": "Sand",
+      "normalTexture": {
+        "index": 2,
+        "scale": 1,
+        "texCoord": 0
+      },
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           1,
@@ -949,18 +936,18 @@
           "texCoord": 0
         },
         "metallicFactor": 0,
-        "roughnessFactor": 0.59999999999999998
+        "roughnessFactor": 0.69257576679999999
       }
     },
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "emissiveFactor": [
-        0,
-        0,
-        0
-      ],
-      "name": "material",
+      "name": "Environment",
+      "normalTexture": {
+        "index": 5,
+        "scale": 0.50469697889999998,
+        "texCoord": 1
+      },
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           1,
@@ -969,14 +956,67 @@
           1
         ],
         "baseColorTexture": {
+          "index": 6,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.77136364560000004
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.59511238199999994,
+        0,
+        1
+      ],
+      "name": "Sand",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.52893940319999999
+        ],
+        "baseColorTexture": {
+          "index": 7,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.98636372880000001,
+        0.98636372880000001,
+        0.98636372880000001
+      ],
+      "emissiveTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.40000000000000002
+        ],
+        "baseColorTexture": {
           "index": 1,
           "texCoord": 0
         },
         "metallicFactor": 0,
-        "roughnessFactor": 0.59999999999999998
+        "roughnessFactor": 0.52287879709999996
       }
     },
     {
+      "alphaMode": "BLEND",
       "doubleSided": false,
       "emissiveFactor": [
         1,
@@ -984,29 +1024,28 @@
         1
       ],
       "emissiveTexture": {
-        "index": 3,
+        "index": 8,
         "texCoord": 0
       },
       "name": "material_5",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0,
-          0,
-          0,
-          1
+          1,
+          1,
+          1,
+          0.062272736500000002
         ],
         "baseColorTexture": {
-          "index": 2,
+          "index": 9,
           "texCoord": 0
         },
-        "metallicFactor": 0,
-        "roughnessFactor": 0.59999999999999998
+        "metallicFactor": 1,
+        "roughnessFactor": 0.75924243349999998
       }
     }
   ],
   "meshes": [
     {
-      "name": "Fortress_Fortress_0",
       "primitives": [
         {
           "attributes": {
@@ -1025,7 +1064,6 @@
       ]
     },
     {
-      "name": "Fortress_Fortress_0",
       "primitives": [
         {
           "attributes": {
@@ -1044,7 +1082,6 @@
       ]
     },
     {
-      "name": "Fortress_Fortress_0",
       "primitives": [
         {
           "attributes": {
@@ -1063,7 +1100,6 @@
       ]
     },
     {
-      "name": "Fortress_Environment_0",
       "primitives": [
         {
           "attributes": {
@@ -1082,7 +1118,6 @@
       ]
     },
     {
-      "name": "Fortress_Sand_0",
       "primitives": [
         {
           "attributes": {
@@ -1100,7 +1135,6 @@
       ]
     },
     {
-      "name": "Sea_Sea_0",
       "primitives": [
         {
           "attributes": {
@@ -1117,16 +1151,16 @@
       ]
     },
     {
-      "name": "Sky_Sky_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 46,
             "POSITION": 45,
             "TANGENT": 47,
-            "TEXCOORD_0": 48
+            "TEXCOORD_0": 48,
+            "TEXCOORD_1": 49
           },
-          "indices": 49,
+          "indices": 50,
           "material": 4,
           "mode": 4
         }
@@ -1156,6 +1190,66 @@
       "children": [
         3
       ],
+      "name": "root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2.2204460492503131e-16,
+        1,
+        0,
+        0,
+        -1,
+        2.2204460492503131e-16,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1,
+        0,
+        -0,
+        0,
+        -0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "RootNode (model correction matrix)_1"
+    },
+    {
+      "children": [
+        7
+      ],
       "matrix": [
         1,
         0,
@@ -1174,31 +1268,31 @@
         0,
         1
       ],
-      "name": "ef0dcba82d2d448fbfe0ca97f8fadd87.fbx"
+      "name": "ef0dcba82d2d448fbfe0ca97f8fadd87.fbx_2"
     },
     {
       "children": [
-        4,
-        11,
-        13
+        8,
+        20,
+        23
       ],
-      "name": "RootNode"
+      "name": "RootNode_3"
     },
     {
       "children": [
-        5
+        9
       ],
       "matrix": [
-        -0.99999999999999978,
-        -1.8988215163869611e-15,
-        -2.3849761399470782e-08,
+        -1,
+        -1.8988214981889876e-15,
+        -2.384976127700611e-08,
         0,
-        -2.3849761399470782e-08,
+        -2.384976127700611e-08,
         -4.4408920985006262e-16,
-        0.99999999999999967,
+        1,
         0,
-        -1.8988215246587673e-15,
-        0.99999999999999989,
+        -1.8988214981889876e-15,
+        1,
         3.3306690738754696e-16,
         0,
         17.116725921630859,
@@ -1206,20 +1300,20 @@
         23.590717315673828,
         1
       ],
-      "name": "Fortress"
+      "name": "Fortress_4"
     },
     {
       "children": [
-        6,
-        7,
-        8,
-        9,
-        10
+        10,
+        12,
+        14,
+        16,
+        18
       ],
       "matrix": [
         1,
         0,
-        -0,
+        0,
         0,
         0,
         1,
@@ -1234,31 +1328,61 @@
         -60.289215087890625,
         1
       ],
-      "name": ""
-    },
-    {
-      "mesh": 0,
-      "name": "Fortress_Fortress_0"
-    },
-    {
-      "mesh": 1,
-      "name": "Fortress_Fortress_0"
-    },
-    {
-      "mesh": 2,
-      "name": "Fortress_Fortress_0"
-    },
-    {
-      "mesh": 3,
-      "name": "Fortress_Environment_0"
-    },
-    {
-      "mesh": 4,
-      "name": "Fortress_Sand_0"
+      "name": "_5"
     },
     {
       "children": [
-        12
+        11
+      ],
+      "name": "Fortress_Fortress_0_6"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "children": [
+        13
+      ],
+      "name": "Fortress_Fortress_0_7"
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    },
+    {
+      "children": [
+        15
+      ],
+      "name": "Fortress_Fortress_0_8"
+    },
+    {
+      "mesh": 2,
+      "name": ""
+    },
+    {
+      "children": [
+        17
+      ],
+      "name": "Fortress_Environment_0_9"
+    },
+    {
+      "mesh": 3,
+      "name": ""
+    },
+    {
+      "children": [
+        19
+      ],
+      "name": "Fortress_Sand_0_10"
+    },
+    {
+      "mesh": 4,
+      "name": ""
+    },
+    {
+      "children": [
+        21
       ],
       "matrix": [
         1,
@@ -1278,15 +1402,21 @@
         14.920204162597656,
         1
       ],
-      "name": "Sea"
-    },
-    {
-      "mesh": 5,
-      "name": "Sea_Sea_0"
+      "name": "Sea_11"
     },
     {
       "children": [
-        14
+        22
+      ],
+      "name": "Sea_Sea_0_12"
+    },
+    {
+      "mesh": 5,
+      "name": ""
+    },
+    {
+      "children": [
+        24
       ],
       "matrix": [
         1,
@@ -1306,11 +1436,17 @@
         0,
         1
       ],
-      "name": "Sky"
+      "name": "Sky_13"
+    },
+    {
+      "children": [
+        25
+      ],
+      "name": "Sky_Sky_0_14"
     },
     {
       "mesh": 6,
-      "name": "Sky_Sky_0"
+      "name": ""
     }
   ],
   "samplers": [
@@ -1358,6 +1494,18 @@
     {
       "sampler": 0,
       "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    },
+    {
+      "sampler": 0,
+      "source": 9
     }
   ]
 }
